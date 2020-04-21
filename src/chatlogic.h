@@ -17,8 +17,14 @@ private:
     ////
 
     // data handles (owned)
-    std::vector<GraphNode *> _nodes;
-    std::vector<GraphEdge *> _edges;
+    //std::vector<GraphNode *> _nodes;
+
+    // Task 3
+    // Each instance of GrapNode is exclusively owned by the class ChatLogic.
+    std::vector<std::unique_ptr<GraphNode>> _nodes;
+
+    // Task 4
+    //std::vector<GraphEdge *> _edges;
 
     ////
     //// EOF STUDENT CODE
